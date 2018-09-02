@@ -9,7 +9,7 @@ Sample reading:
 
 See the wiki for more information on the device and how to connect.
 
-This project is licensed under the terms of the MIT license
+This project is licensed under the terms of the GPL v3 license
 
 Sensors can be obtained here:
 
