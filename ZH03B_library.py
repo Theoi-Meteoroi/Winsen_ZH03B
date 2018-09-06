@@ -1,4 +1,14 @@
 #!/usr/bin/python3
+#
+#   v0.1  ZH03B_library.py
+#   9/5/2018  Dave Thompson
+#
+#   ZH03B Python3 Library
+#
+#   Caller needs to keep track of Q&A mode in use. No state stored.
+#
+#
+#
 import time
 import serial
 import binascii
@@ -65,8 +75,10 @@ def QAgetsample():
 
     if pwr-flag = "OFF":
        DormantMode( "ON" )
+       sleep(1)
        ser.write( b'0xFF, 0x01, 0x86, 0x00, 0x00, 0x00, 0x00, 0x00, 0x79')
-       while sampled = FALSE:
+       sampled = False
+       while sampled != True:
          sample = ser.read(2)
          if sample != b'':             # blank line check filter
             reading = HexToByte( ((binascii.hexlify(sample)).hex()) )
@@ -85,6 +97,7 @@ def QAgetsample():
           continue
     else:
        ser.write( b'0xFF, 0x01, 0x86, 0x00, 0x00, 0x00, 0x00, 0x00, 0x79')
+       sampled = False
        while sampled != True:
          sample = ser.read(2)
          if sample != b'':             # blank line check filter
@@ -104,14 +117,14 @@ def QAgetsample():
            else:
              continue
 
-
 def DormantMode(pwr-state):
     """
     Turn dormant mode on or off. Must be on to measure.
     """
-sampled = False
+
     if pwr-state == "ON":
        ser.write( b'0xFF, 0x01, 0xA7, 0x00, 0x00, 0x00, 0x00, 0x00, 0x56')
+       sampled = False
        while sampled != "True":
          status = ser.read(2)
           if status != b'':
@@ -127,9 +140,10 @@ sampled = False
        else:
          continue
 
-sampled = False
+
     If pwr-state == "OFF"
        ser.write( b'0xFF, 0x01, 0xA7, 0x01, 0x00, 0x00, 0x00, 0x00, 0x57')
+       sampled = False
        while sampled != "True":
          status = ser.read(2)
            if status != b'':
@@ -170,7 +184,6 @@ while not sampled:
        return ( PM1, PM2.5, PM10 )
     else:
       continue
-
 #
-#
+#  End File
 #
