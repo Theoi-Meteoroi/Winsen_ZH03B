@@ -11,7 +11,7 @@ This project is a Python3 program and function library to obtain sample readings
 
 Winsen_ZH03B.py - obtain exactly one single sample reading from sensor running in default 'streaming readings' mode. 
                   To make readings continuous -  modify the while-loop to always be TRUE. This program is not compatible with 
-                  Python2.
+                  Python2. This program does not utilize the function library and is standalone.
                   
 Library/test_ZH03B_lib.py - Exercise the function library in a loop
 
