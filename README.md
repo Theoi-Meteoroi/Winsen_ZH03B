@@ -6,6 +6,8 @@ This project is a Python3 program and function library to obtain sample readings
 ### Manual / Datasheet 
 ### https://www.winsen-sensor.com/d/files/air-quality/zh03-series-laser-dust-module-v2_0.pdf
 
+### USB-UART driver for CP2102
+### https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers
 
 ### Files
 
@@ -31,4 +33,4 @@ This project is licensed under the terms of the GPL v3 license
 
 Sensors can be obtained here:
 
-https://www.ebay.com/str/winsenelectronics
+<a href="https://www.tindie.com/stores/CarbonCycle/?ref=offsite_badges&utm_source=sellers_CarbonCycle&utm_medium=badges&utm_campaign=badge_medium"><img src="https://d2ss6ovg47m0r5.cloudfront.net/badges/tindie-mediums.png" alt="I sell on Tindie" width="150" height="78"></a>
