@@ -1,7 +1,7 @@
 # Winsen ZH03B Particle Detector 
 
 
-This project is a Python3 program and function library to obtain sample readings of particle density from a ZH03B detector attached to a Raspberry Pi USB port.  The specific port is currently hard-coded to /dev/ttyUSB1. The code has only been tested over a USB bridge interface (CP2102).  
+This project is a Python3 program and function library to obtain sample readings of particle density from a ZH03B detector attached to a Raspberry Pi USB port.  The specific port is currently hard-coded to /dev/ttyUSB1. The code has only been tested over a USB bridge interface (CP2102) on Raspian Stretch and OSx High Sierra.   
 
 ### Manual / Datasheet 
 ### https://www.winsen-sensor.com/d/files/air-quality/zh03-series-laser-dust-module-v2_0.pdf
