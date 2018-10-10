@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 #
-#   v0.8  ZH03B_lib.py
+#   v0.9  ZH03B_lib.py
 #   9/7/2018  Dave Thompson
 #
 #   ZH03B Python3 Library
