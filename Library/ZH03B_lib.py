@@ -86,10 +86,12 @@ def DormantMode(pwr_status):
     #
     if pwr_status == "sleep":
        ser.write( b"\xFF\x01\xA7\x01\x00\x00\x00\x00\x57")
-       response = HexToByte( ((binascii.hexlify(ser.read(2))).hex()) )
-       if response == "0000":
+       response = HexToByte( ((binascii.hexlify(ser.read(3))).hex()) )
+       if response == "ffa701":
+          ser.flushInput() #flush input buffer
           return ("FanOFF")
        else:
+          ser.flushInput() #flush input buffer
           return ("FanERROR")
 
 
@@ -98,9 +100,11 @@ def DormantMode(pwr_status):
     if pwr_status == "run":
        ser.write( b"\xFF\x01\xA7\x00\x00\x00\x00\x00\x58")
        response = HexToByte( ((binascii.hexlify(ser.read(2))).hex()) )
-       if response == "0000":
+       if response == "ffa701":
+          ser.flushInput() #flush input buffer
           return ("FanON")
        else:
+          ser.flushInput() #flush input buffer
           return ("FanERROR")
 
 
