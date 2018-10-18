@@ -27,7 +27,7 @@ Sample reading:
 ###   PM1 level:  60 PM2.5 level:  121 PM10 level:  149
 
 
-See the wiki for more information on the device and how to connect.
+See the [wiki](https://github.com/Theoi-Meteoroi/Winsen_ZH03B/wiki) for more information on the device and how to connect.
 
 This project is licensed under the terms of the GPL v3 license
 
