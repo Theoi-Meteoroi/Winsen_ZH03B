@@ -1,5 +1,7 @@
 # Winsen ZH03B Particle Detector 
 
+## CircuitPython files have moved.  See: https://github.com/Theoi-Meteoroi/Carboncycle_CircuitPython_ZH03B
+
 
 This project is a Python3 program and function library to obtain sample readings of particle density from a ZH03B detector attached to a Raspberry Pi USB port.  The specific port is currently hard-coded to /dev/ttyUSB1. The code has only been tested over a USB bridge interface (CP2102) on Raspian Stretch and OSx High Sierra.   
 
